@@ -10,7 +10,7 @@ const Header = () => {
           href="/dashboard"
           className="hidden md:flex items-center justify-between gap-2"
         >
-          <h1 className="text-lg font-semibold">Swiftecs</h1>
+          <h1 className="text-lg font-semibold text-[#252d49]">Swiftecs</h1>
         </Link>
         <div className="block md:hidden">
           <MobileSidebar />

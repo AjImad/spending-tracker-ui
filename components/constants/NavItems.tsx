@@ -1,18 +1,26 @@
-import { BookOpenCheck, LayoutDashboard } from "lucide-react";
 import { NavItem } from "@/types";
+import {
+  ArrowRightLeft,
+  LayoutDashboard,
+  LineChart,
+  PiggyBank,
+  Settings,
+  User,
+  Wallet,
+} from "lucide-react";
 
 export const NavItems: NavItem[] = [
   {
     title: "Dashboard",
     icon: LayoutDashboard,
     href: "/dashboard",
-    color: "text-sky-500",
+    color: "#252d49",
   },
   {
     title: "Transactions",
-    icon: BookOpenCheck,
+    icon: ArrowRightLeft,
     href: "/transactions",
-    color: "text-orange-500",
+    color: "#252d49",
     // isChidren: true,
     // children: [
     //   {
@@ -37,32 +45,32 @@ export const NavItems: NavItem[] = [
   },
   {
     title: "My Wallet",
-    icon: BookOpenCheck,
+    icon: Wallet,
     href: "/my-wallet",
-    color: "text-orange-500",
+    color: "#252d49",
   },
   {
     title: "Budgets",
-    icon: BookOpenCheck,
+    icon: PiggyBank,
     href: "/budgets",
-    color: "text-orange-500",
+    color: "#252d49",
   },
   {
     title: "Account",
-    icon: BookOpenCheck,
+    icon: User,
     href: "/account",
-    color: "text-orange-500",
+    color: "#252d49",
   },
   {
     title: "Reports",
-    icon: BookOpenCheck,
+    icon: LineChart,
     href: "/reports",
-    color: "text-orange-500",
+    color: "#252d49",
   },
   {
     title: "Settings",
-    icon: BookOpenCheck,
+    icon: Settings,
     href: "/settings",
-    color: "text-orange-500",
+    color: "#252d49",
   },
 ];
