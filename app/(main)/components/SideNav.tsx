@@ -27,12 +27,12 @@ const SideNav = ({ items, setOpen, className }: SideNavProps) => {
               buttonVariants({ variant: "ghost" }),
               "group relative flex h-12 justify-start",
               path === item.href &&
-                "bg-[#252d49] text-white hover:bg-[#3b425b] hover:text-white"
+                "bg-customBlue text-white hover:bg-[#3b425b] hover:text-white"
             )}
           >
             <item.icon
               className={cn(
-                "h-5 w-5 text-[#252d49]",
+                "h-5 w-5 text-customBlue",
                 path === item.href && "text-white"
               )}
             />
@@ -56,12 +56,12 @@ const SideNav = ({ items, setOpen, className }: SideNavProps) => {
             buttonVariants({ variant: "ghost" }),
             "group relative flex h-12 justify-start",
             path === lastItem.href &&
-              "bg-[#252d49] text-white hover:bg-[#3b425b] hover:text-white"
+              "bg-customBlue text-white hover:bg-[#3b425b] hover:text-white"
           )}
         >
           <lastItem.icon
             className={cn(
-              "h-5 w-5 text-[#252d49]",
+              "h-5 w-5 text-customBlue",
               path === lastItem.href && "text-white"
             )}
           />

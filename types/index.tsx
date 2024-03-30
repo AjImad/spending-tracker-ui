@@ -8,3 +8,8 @@ export interface NavItem {
   isChidren?: boolean;
   children?: NavItem[];
 }
+
+export interface Language {
+  country?: string;
+  icon: string;
+}
