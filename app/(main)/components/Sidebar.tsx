@@ -26,7 +26,7 @@ const Sidebar = ({ className }: SidebarProps) => {
       className={cn(
         "relative h-screen border-r pt-20 md:block hidden",
         status && "duration-500",
-        isOpen ? "w-72" : "w-[78px]",
+        isOpen ? "w-64" : "w-[78px]",
         className
       )}
     >
