@@ -35,7 +35,7 @@ const MobileSidebar = () => {
       >
         <SheetHeader>
           <SheetTitle className="flex justify-start uppercase text-customBlue">
-            Swiftecs
+            Swiftecs.
           </SheetTitle>
         </SheetHeader>
         <div className="h-full py-6">

@@ -140,12 +140,12 @@ const Header = () => {
           <SelectTrigger
             className={cn(
               buttonVariants({ variant: "ghost" }),
-              "p-0 focus-visible:ring-offset-0 focus-visible:ring-0 border-none bg-transparent hover:bg-muted/70"
+              "p-0 border-none focus-visible:ring-offset-0 focus-visible:ring-0  bg-transparent hover:bg-muted/70"
             )}
           >
             {isMobile ? (
               <SelectValue>
-                <Image src={lang} alt="United Kingdom" width={25} height={25} />
+                <Image src={lang} alt="United Kingdom" width={30} height={30} />
               </SelectValue>
             ) : (
               <SelectValue
@@ -183,7 +183,7 @@ const Header = () => {
         {/* Account Dropdown */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Avatar className="h-10 w-10 cursor-pointer">
+            <Avatar className="h-9 w-9 md:h-10 md:w-10 cursor-pointer">
               <AvatarImage
                 src="https://avatars.githubusercontent.com/u/83509351?v=4"
                 alt="@shadcn"

@@ -1,0 +1,28 @@
+/* Make Tooltip background transparent */
+.apexcharts-tooltip {
+        background: rgba(255, 255, 255, 0.7) !important;
+        backdrop-filter: blur(4px);
+        border: none !important;
+}
+/* Tooltip Title center */
+.apexcharts-tooltip .apexcharts-tooltip-title {
+        font-weight: 600;
+        color: rgba(113, 111, 111, 0.87);
+        text-align: center;
+        border: none !important;
+}
+
+/* Tooltip xais:  Arrow Top */
+.apexcharts-xaxistooltip-bottom:before {
+        border-bottom-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Tooltip xaix: change background */
+.apexcharts-xaxistooltip-bottom {
+        background: rgba(255, 255, 255, 0.7) !important;
+        backdrop-filter: blur(4px);
+        border: none !important;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 10px !important;
+}
+

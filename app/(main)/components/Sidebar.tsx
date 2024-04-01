@@ -41,7 +41,7 @@ const Sidebar = ({ className }: SidebarProps) => {
             !isOpen && "text-sm"
           )}
         >
-          {isOpen ? "Swiftecs" : "Swftx"}
+          {isOpen ? "Swiftecs." : "Swftx"}
         </h1>
       </Link>
       <ChevronsRight
