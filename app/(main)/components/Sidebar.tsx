@@ -2,10 +2,11 @@
 
 import { useSidebar } from "@/hooks/useSlidebar";
 import { cn } from "@/lib/utils";
-import { ArrowLeft, ChevronsLeft } from "lucide-react";
+import { ChevronsRight } from "lucide-react";
 import { useState } from "react";
 import SideNav from "./SideNav";
 import { NavItems } from "@/components/constants/NavItems";
+import Link from "next/link";
 
 interface SidebarProps {
   className?: string;
@@ -24,24 +25,37 @@ const Sidebar = ({ className }: SidebarProps) => {
   return (
     <nav
       className={cn(
-        "relative h-screen border-r pt-20 md:block hidden",
+        "relative h-screen border-r pt-6 pb-6 px-3 md:block hidden md:z-50",
         status && "duration-500",
         isOpen ? "w-64" : "w-[78px]",
         className
       )}
     >
-      <ChevronsLeft
+      <Link
+        href="/dashboard"
+        className="hidden md:flex items-center justify-between gap-2"
+      >
+        <h1
+          className={cn(
+            "text-lg font-semibold text-customBlue uppercase transition-all duration-300",
+            !isOpen && "text-sm"
+          )}
+        >
+          {isOpen ? "Swiftecs" : "Swftx"}
+        </h1>
+      </Link>
+      <ChevronsRight
         className={cn(
-          "absolute -right-3 top-20 cursor-pointer rounded-full border bg-background text-3xl text-foreground p-0.5",
+          "absolute -right-3 top-18 cursor-pointer rounded-full border bg-background text-3xl text-foreground p-0.5",
           isOpen && "rotate-180"
         )}
         onClick={handleToggle}
       />
       <div className="space-y-4 py-4 h-full">
-        <div className="px-3 py-2 h-full">
+        <div className=" pt-6 h-full">
           <SideNav
             className="
-            text-background opacity-0 transition-all duration-300 group-hover:z-50 group-hover:ml-4 group-hover:rounded group-hover:bg-forground group-hover:p-2 group-hover:opacity-100
+            text-background opacity-0 transition-all duration-300 group-hover:z-50 group-hover:ml-4 group-hover:rounded group-hover:bg-forground group-hover:p-2 group-hover:opacity-0
           "
             items={NavItems}
           />

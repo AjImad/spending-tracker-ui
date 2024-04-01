@@ -27,13 +27,18 @@ const MobileSidebar = () => {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <MenuIcon />
+        <MenuIcon className="text-muted-foreground" />
       </SheetTrigger>
-      <SheetContent side="left" className="w-72">
+      <SheetContent
+        side="left"
+        className="w-72 bgbackdrop-filter backdrop-blur-lg bg-opacity-30"
+      >
         <SheetHeader>
-          <SheetTitle className="flex justify-start">Swiftecs</SheetTitle>
+          <SheetTitle className="flex justify-start uppercase text-customBlue">
+            Swiftecs
+          </SheetTitle>
         </SheetHeader>
-        <div className="">
+        <div className="h-full py-6">
           <SideNav items={NavItems} setOpen={setOpen} />
         </div>
       </SheetContent>

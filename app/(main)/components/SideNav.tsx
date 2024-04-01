@@ -22,18 +22,19 @@ const SideNav = ({ items, setOpen, className }: SideNavProps) => {
         {items.slice(0, items.length - 1).map((item) => (
           <Link
             href={item.href}
+            onClick={() => setOpen?.(false)}
             key={item.title}
             className={cn(
               buttonVariants({ variant: "ghost" }),
-              "group relative flex h-12 justify-start",
+              "group relative flex h-12 justify-start text-muted-foreground hover:text-muted-foreground",
               path === item.href &&
-                "bg-customBlue text-white hover:bg-[#3b425b] hover:text-white"
+                "bg-[#00a76f]/[0.08] text-[#00a76f] hover:bg-[#00a76f29] hover:text-[#00a76f]"
             )}
           >
             <item.icon
               className={cn(
-                "h-5 w-5 text-customBlue",
-                path === item.href && "text-white"
+                "h-5 w-5 text-muted-foreground",
+                path === item.href && "text-[#00a76f]"
               )}
             />
             <span
@@ -48,20 +49,20 @@ const SideNav = ({ items, setOpen, className }: SideNavProps) => {
         ))}
       </div>
       <div>
-        <Separator className="w-full" />
+        <Separator className="w-full mb-2" />
         <Link
           href={lastItem.href}
           key={lastItem.title}
           className={cn(
             buttonVariants({ variant: "ghost" }),
-            "group relative flex h-12 justify-start",
+            "group relative flex h-12 justify-start text-muted-foreground hover:text-muted-foreground",
             path === lastItem.href &&
-              "bg-customBlue text-white hover:bg-[#3b425b] hover:text-white"
+              "bg-[#00a76f]/[0.08] text-[#00a76f] hover:bg-[#00a76f29] hover:text-[#00a76f]"
           )}
         >
           <lastItem.icon
             className={cn(
-              "h-5 w-5 text-customBlue",
+              "h-5 w-5 text-customBlue text-muted-foreground",
               path === lastItem.href && "text-white"
             )}
           />
