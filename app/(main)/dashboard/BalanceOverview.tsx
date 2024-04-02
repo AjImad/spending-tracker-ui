@@ -1,6 +1,6 @@
 import ReactApexChart from "react-apexcharts";
 
-const Chart = () => {
+const BalanceOverview = () => {
   var options = {
     chart: {
       id: "area",
@@ -60,4 +60,4 @@ const Chart = () => {
   );
 };
 
-export default Chart;
+export default BalanceOverview;

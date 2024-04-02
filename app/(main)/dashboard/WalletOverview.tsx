@@ -2,7 +2,7 @@ import ReactApexChart from "react-apexcharts";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import { cn } from "@/lib/utils";
 
-const Wallet = () => {
+const WalletOverview = () => {
   const isMobile = useMediaQuery("only screen and (max-width : 923px)");
   const options = {
     chart: {
@@ -118,4 +118,4 @@ const Wallet = () => {
     </div>
   );
 };
-export default Wallet;
+export default WalletOverview;

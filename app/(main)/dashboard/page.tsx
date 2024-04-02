@@ -1,8 +1,8 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { useMediaQuery } from "@uidotdev/usehooks";
-import Chart from "./Chart";
-import Wallet from "./Wallet";
+import BalanceOverview from "./BalanceOverview";
+import WalletOverview from "./WalletOverview";
 import "./chartStyle.css";
 
 const DashboardPage = () => {
@@ -21,13 +21,13 @@ const DashboardPage = () => {
           )}
         >
           <div className="w-full flex flex-col space-y-6">
-            <Wallet />
-            <Chart />
+            <WalletOverview />
+            <BalanceOverview />
             {/* Buget overview */}
             {/* Recent transaction */}
           </div>
           <div className="w-full flex flex-col space-y-6">
-            <Chart />
+            <BalanceOverview />
             {/* Balance statistiques */}
             {/* Expenses categories */}
           </div>
