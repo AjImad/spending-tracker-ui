@@ -1,5 +1,3 @@
-"use client";
-
 import { useSidebar } from "@/hooks/useSlidebar";
 import { cn } from "@/lib/utils";
 import { ChevronsRight } from "lucide-react";
@@ -46,7 +44,7 @@ const Sidebar = ({ className }: SidebarProps) => {
       </Link>
       <ChevronsRight
         className={cn(
-          "absolute -right-3 top-18 cursor-pointer rounded-full border bg-background text-3xl text-foreground p-0.5",
+          "absolute -right-3 top-19 cursor-pointer rounded-full border bg-background text-3xl text-foreground p-0.5",
           isOpen && "rotate-180"
         )}
         onClick={handleToggle}

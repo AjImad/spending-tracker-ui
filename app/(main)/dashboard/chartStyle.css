@@ -3,6 +3,8 @@
         background: rgba(255, 255, 255, 0.7) !important;
         backdrop-filter: blur(4px);
         border: none !important;
+        border-radius: 10px !important;
+        box-shadow: rgba(145, 158, 171, 0.24) 0px 0px 2px 0px, rgba(145, 158, 171, 0.24) -20px 20px 40px -4px;
 }
 /* Tooltip Title center */
 .apexcharts-tooltip .apexcharts-tooltip-title {

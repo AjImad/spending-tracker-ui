@@ -1,5 +1,4 @@
 import ReactApexChart from "react-apexcharts";
-import "./chartStyle.css";
 
 const Chart = () => {
   var options = {
@@ -17,8 +16,17 @@ const Chart = () => {
         breakpoint: 1000,
         options: {
           chart: {
-            height: 250,
-            width: 380,
+            height: 350,
+            width: "100%",
+          },
+        },
+      },
+      {
+        breakpoint: 800,
+        options: {
+          chart: {
+            height: 280,
+            width: "100%",
           },
         },
       },
@@ -36,14 +44,14 @@ const Chart = () => {
     },
   ];
   return (
-    <div className="app">
+    <div className="w-full inline-block bg-white rounded-xl shadow-md p-2">
       <div className="row">
         <div>
           <ReactApexChart
             options={options}
             series={series}
             type="area"
-            width={600}
+            width="100%"
             height={300}
           />
         </div>

@@ -1,5 +1,3 @@
-"use client";
-
 import { Languages } from "@/components/constants/Langues";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -57,7 +55,7 @@ const Header = () => {
     </div>
   );
 
-  const isMobile = useMediaQuery("(max-width: 768px)");
+  const isMobile = useMediaQuery("(max-width: 786px)");
 
   const [open, setOpen] = useState(false);
 
@@ -76,11 +74,9 @@ const Header = () => {
   }, []);
 
   return (
-    <nav className="sticky bg-[#eff1f5] left-0 right-0 top-0 z-20 flex h-16 items-center justify-between px-6">
+    <nav className="sticky bg-[#eff1f5] py-2 backdrop-filter backdrop-blur-lg bg-opacity-30 left-0 right-0 top-0 z-20 flex h-16 items-center justify-between px-6">
       <div className="flex justify-between items-center space-x-3">
-        <div className="block md:hidden">
-          <MobileSidebar />
-        </div>
+        {isMobile && <MobileSidebar />}
         {/* Search command */}
         <Button
           variant="ghost"
