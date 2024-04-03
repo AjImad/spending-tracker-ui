@@ -4,6 +4,7 @@ import { useMediaQuery } from "@uidotdev/usehooks";
 import BalanceOverview from "./BalanceOverview";
 import WalletOverview from "./WalletOverview";
 import "./chartStyle.css";
+import BudgetOverview from "./BudgetOverview";
 
 const DashboardPage = () => {
   const isMobile = useMediaQuery("only screen and (max-width : 923px)");
@@ -22,8 +23,8 @@ const DashboardPage = () => {
         >
           <div className="w-full flex flex-col space-y-6">
             <WalletOverview />
-            <BalanceOverview />
             {/* Buget overview */}
+            <BudgetOverview />
             {/* Recent transaction */}
           </div>
           <div className="w-full flex flex-col space-y-6">
