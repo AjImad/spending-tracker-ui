@@ -3,7 +3,7 @@ import ReactApexChart from "react-apexcharts";
 const BalanceOverview = () => {
   var options = {
     chart: {
-      id: "area",
+      type: "area",
     },
     dataLabels: {
       enabled: false,
@@ -38,24 +38,19 @@ const BalanceOverview = () => {
       name: "series1",
       data: [31, 40, 28, 51, 42, 109, 100],
     },
-    {
-      name: "series2",
-      data: [11, 32, 45, 32, 34, 52, 41],
-    },
   ];
   return (
-    <div className="w-full inline-block bg-white rounded-xl shadow-md p-2">
-      <div className="row">
-        <div>
-          <ReactApexChart
-            options={options}
-            series={series}
-            type="area"
-            width="100%"
-            height={300}
-          />
-        </div>
+    <div className="w-full inline-block bg-white rounded-xl shadow-md p-4">
+      <div className="text-md font-bold text-slate-800 leading-normal">
+        Balance overview
       </div>
+      <ReactApexChart
+        options={options as ApexCharts.ApexOptions}
+        series={series}
+        type="area"
+        width="100%"
+        height={300}
+      />
     </div>
   );
 };
