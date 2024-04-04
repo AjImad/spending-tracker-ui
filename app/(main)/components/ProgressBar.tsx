@@ -42,7 +42,7 @@ const ProgressBar = ({
           Today
         </span>
       )}
-      <div className="flex justify-between text-xs text-muted-foreground">
+      <div className="flex justify-between text-xs md:text-sm text-muted-foreground">
         <p>
           {startDate.toLocaleDateString("en-US", {
             month: "2-digit",

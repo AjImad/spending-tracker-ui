@@ -55,7 +55,7 @@ const Header = () => {
     </div>
   );
 
-  const isMobile = useMediaQuery("(max-width: 786px)");
+  const isMobile = useMediaQuery("(max-width: 927px)");
 
   const [open, setOpen] = useState(false);
 
