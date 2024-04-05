@@ -7,6 +7,7 @@ import "./chartStyle.css";
 import BudgetOverview from "./BudgetOverview";
 import BalanceStatistics from "./BalanceStatistics";
 import ExpensesCategories from "./ExpensesCategories";
+import TransactionsOverview from "./TransactionsOverview";
 
 const DashboardPage = () => {
   const isMobile = useMediaQuery("only screen and (max-width : 927px)");
@@ -25,14 +26,13 @@ const DashboardPage = () => {
         >
           <div className="w-full flex flex-col space-y-6">
             <WalletOverview />
+            <ExpensesCategories />
             <BudgetOverview />
-            {/* Recent transaction */}
           </div>
           <div className="w-full flex flex-col space-y-6">
             <BalanceOverview />
+            <TransactionsOverview />
             <BalanceStatistics />
-            <ExpensesCategories />
-            {/* Expenses categories */}
           </div>
         </div>
       </div>
