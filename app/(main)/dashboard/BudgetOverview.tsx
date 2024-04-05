@@ -1,20 +1,19 @@
-import { Progress } from "@/components/ui/progress";
-import ProgressBar from "../components/ProgressBar";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
+import Image from "next/image";
+import ProgressBar from "../components/ProgressBar";
 
 const BudgetOverview = () => {
   const startDate: Date = new Date("2024-04-01");
   const endDate: Date = new Date("2024-04-30");
 
   return (
-    <div className="w-full inline-block bg-white rounded-xl shadow-md space-y-6">
+    <div className="w-full inline-block bg-white rounded-xl shadow-md ">
       <div className="p-4">
         <div className="text-md font-bold text-slate-800 leading-normal mb-5">
           Budget overview
         </div>
-        <div className="space-y-1">
+        <div className="space-y-[.5] hover:bg-neutral-100/95 p-2 rounded-lg cursor-pointer">
           <p>Entertaiment</p>
           <div className="flex justify-center items-center space-x-2">
             <Image
@@ -23,7 +22,6 @@ const BudgetOverview = () => {
               width={40}
               height={40}
               sizes="100vw"
-              // style={{ width: "100%", height: "auto" }}
             />
             <ProgressBar
               startDate={startDate}
@@ -32,7 +30,7 @@ const BudgetOverview = () => {
             />
           </div>
         </div>
-        <div className="space-y-1">
+        <div className="space-[.5] hover:bg-neutral-100/95 p-2 rounded-lg cursor-pointer">
           <p>Eating out</p>
           <div className="flex justify-center items-center space-x-2">
             <Image
@@ -41,7 +39,6 @@ const BudgetOverview = () => {
               width={40}
               height={40}
               sizes="100vw"
-              // style={{ width: "100%", height: "auto" }}
             />
             <ProgressBar
               startDate={startDate}
@@ -51,7 +48,7 @@ const BudgetOverview = () => {
           </div>
         </div>
 
-        <div className="space-y-1">
+        <div className="space-[.5] hover:bg-neutral-100/95 p-2 rounded-lg cursor-pointer">
           <p>Fuel</p>
           <div className="flex justify-center items-center space-x-2">
             <Image
@@ -60,7 +57,6 @@ const BudgetOverview = () => {
               width={40}
               height={40}
               sizes="100vw"
-              // style={{ width: "100%", height: "auto" }}
             />
             <ProgressBar
               startDate={startDate}

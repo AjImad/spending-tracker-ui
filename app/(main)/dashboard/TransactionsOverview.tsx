@@ -14,10 +14,10 @@ const TransactionsOverview = () => {
           Transactions overview
         </h4>
         {/* List transactions */}
-        <div className="space-y-5">
+        <div className="space-y-2">
           {/* Transaction 1 */}
           {isMobile ? (
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center hover:bg-neutral-100/95 p-2 rounded-lg cursor-pointer">
               <div className="flex space-x-2">
                 <Image
                   src="/fuel.svg"
@@ -46,7 +46,7 @@ const TransactionsOverview = () => {
               </div>
             </div>
           ) : (
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center hover:bg-neutral-100/95 p-2 rounded-lg cursor-pointer">
               <div
                 className="flex space-x-2"
                 style={{
@@ -89,7 +89,7 @@ const TransactionsOverview = () => {
 
           {/* Transaction 2 */}
           {isMobile ? (
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center hover:bg-neutral-100/95 p-2 rounded-lg cursor-pointer">
               <div className="flex space-x-2">
                 <Image
                   src="/workbag.svg"
@@ -118,7 +118,7 @@ const TransactionsOverview = () => {
               </div>
             </div>
           ) : (
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center hover:bg-neutral-100/95 p-2 rounded-lg cursor-pointer">
               <div
                 className="flex space-x-2"
                 style={{
@@ -161,7 +161,7 @@ const TransactionsOverview = () => {
 
           {/* Transaction 3 */}
           {isMobile ? (
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center hover:bg-neutral-100/95 p-2 rounded-lg cursor-pointer">
               <div className="flex space-x-2">
                 <Image
                   src="/entertaiment.svg"
@@ -190,7 +190,7 @@ const TransactionsOverview = () => {
               </div>
             </div>
           ) : (
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center hover:bg-neutral-100/95 p-2 rounded-lg cursor-pointer">
               <div
                 className="flex space-x-2"
                 style={{
@@ -232,7 +232,7 @@ const TransactionsOverview = () => {
           )}
           {/* Transaction 4 */}
           {isMobile ? (
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center hover:bg-neutral-100/95 p-2 rounded-lg cursor-pointer">
               <div className="flex space-x-2">
                 <Image
                   src="/eatout.svg"
@@ -261,7 +261,7 @@ const TransactionsOverview = () => {
               </div>
             </div>
           ) : (
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center hover:bg-neutral-100/95 p-2 rounded-lg cursor-pointer">
               <div
                 className="flex space-x-2"
                 style={{
