@@ -2,21 +2,23 @@
 import { cn } from "@/lib/utils";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import BalanceOverview from "./BalanceOverview";
-import WalletOverview from "./WalletOverview";
-import "./chartStyle.css";
-import BudgetOverview from "./BudgetOverview";
 import BalanceStatistics from "./BalanceStatistics";
+import BudgetOverview from "./BudgetOverview";
 import ExpensesCategories from "./ExpensesCategories";
 import TransactionsOverview from "./TransactionsOverview";
+import WalletOverview from "./WalletOverview";
+import "./chartStyle.css";
+import { useTranslation } from "react-i18next";
 
 const DashboardPage = () => {
   const isMobile = useMediaQuery("only screen and (max-width : 927px)");
-
+  // const { t } = useTranslation("dashboard");
+  const { t } = useTranslation("dashboard");
   return (
     <div>
       <div>
         <h1 className=" md:ml-0 text:lg md:text-xl font-bold text-slate-800 leading-normal mb-6">
-          Hi, Welcome back 👋
+          {t("w_back")}
         </h1>
         <div
           className={cn(

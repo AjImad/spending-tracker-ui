@@ -11,5 +11,6 @@ export interface NavItem {
 
 export interface Language {
   country?: string;
+  locale?: string;
   icon: string;
 }

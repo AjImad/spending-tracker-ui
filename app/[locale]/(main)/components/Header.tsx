@@ -1,6 +1,6 @@
 import { Languages } from "@/components/constants/Langues";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -10,15 +10,6 @@ import {
   DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Language } from "@/types";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import {
   Bell,
@@ -30,8 +21,6 @@ import {
   Smile,
   User,
 } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
 import MobileSidebar from "./MobileSidebar";
 
 import {
@@ -44,22 +33,13 @@ import {
   CommandSeparator,
   CommandShortcut,
 } from "@/components/ui/command";
-import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Header = () => {
-  const CustomOption = ({ country, icon }: Language) => (
-    <div className="flex justify-center items-center space-x-3">
-      <Image src={icon} alt="United Kingdom" width={25} height={25} />
-      <span className="text-muted-foreground">{country}</span>
-    </div>
-  );
-
   const isMobile = useMediaQuery("(max-width: 927px)");
 
   const [open, setOpen] = useState(false);
-
-  const [lang, setLang] = useState(Languages[1].icon);
 
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -132,43 +112,7 @@ const Header = () => {
       </div>
       <div className="flex justify-center items-end space-x-4 md:space-x-7">
         {/* Language Selector */}
-        <Select value={lang} onValueChange={setLang}>
-          <SelectTrigger
-            className={cn(
-              buttonVariants({ variant: "ghost" }),
-              "p-0 border-none focus-visible:ring-offset-0 focus-visible:ring-0  bg-transparent hover:bg-muted/70"
-            )}
-          >
-            {isMobile ? (
-              <SelectValue>
-                <Image src={lang} alt="United Kingdom" width={30} height={30} />
-              </SelectValue>
-            ) : (
-              <SelectValue
-                placeholder={
-                  <CustomOption
-                    country={Languages[1].country}
-                    icon={Languages[1].icon}
-                  />
-                }
-                className="border-none focus:ring-transparent"
-              />
-            )}
-          </SelectTrigger>
-          <SelectContent>
-            <SelectGroup>
-              {Languages.map((language) => (
-                <SelectItem
-                  key={language.country}
-                  value={language.icon ?? Languages[1].icon}
-                  aria-checked={false}
-                >
-                  <CustomOption {...language} />
-                </SelectItem>
-              ))}
-            </SelectGroup>
-          </SelectContent>
-        </Select>
+        <LanguageSwitcher isMobile={isMobile} />
         {/* Notification Bell */}
         <div className="relative cursor-pointer">
           <Bell className="text-muted-foreground w-7 h-7" />
