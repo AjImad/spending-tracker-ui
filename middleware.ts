@@ -2,7 +2,7 @@ import {i18nRouter} from 'next-i18n-router';
 import i18nConfig from './i18nConfig';
 
 export function middleware(request: any) {
-    console.log('middleware: ', i18nRouter(request, i18nConfig));
+    // This function is called for every request to the server.
     return i18nRouter(request, i18nConfig);
 }
 
