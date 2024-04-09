@@ -3,5 +3,7 @@
 "expense": "Dépense",
 "income": "Revenu",
 "balance": "Solde",
-"balance_overview": "Aperçu du solde"
+"balance_overview": "Aperçu du solde",
+"expenses_categories": "Catégories de dépenses",
+"categories": "Catégories"
 }

@@ -1,6 +1,8 @@
 import ReactApexChart from "react-apexcharts";
+import { useTranslation } from "react-i18next";
 
 const ExpensesCategories = () => {
+  const { t } = useTranslation("dashboard");
   const options = {
     chart: {
       type: "polarArea",
@@ -78,7 +80,7 @@ const ExpensesCategories = () => {
     <div className="w-full relative inline-block shadow-md bg-white rounded-xl">
       <div className="p-4">
         <h4 className="text-md font-bold text-slate-800 leading-normal mb-5">
-          Expenses Categories
+          {t("expenses_categories")}
         </h4>
         <div className="flex justify-center items-center">
           <ReactApexChart
@@ -91,11 +93,15 @@ const ExpensesCategories = () => {
       </div>
       <div className="grid grid-cols-2 border-t border-dashed p-4">
         <div className="text-center space-y-2 border-r border-dashed">
-          <p className="text-sm md:text-lg text-neutral-500">categories</p>
+          <p className="text-sm md:text-lg text-neutral-500">
+            {t("categories")}
+          </p>
           <p className="text-xl font-bold">9</p>
         </div>
         <div className="text-center space-y-2">
-          <p className="text-sm md:text-lg text-neutral-500">categories</p>
+          <p className="text-sm md:text-lg text-neutral-500">
+            {t("categories")}
+          </p>
           <p className="text-xl font-bold">MAD 1,500</p>
         </div>
       </div>

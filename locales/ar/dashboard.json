@@ -4,5 +4,7 @@
     "expense": "المصروفات",
     "income": "الدخل",
     "balance": "الرصيد",
-    "balance_overview": "نظرة عامة على الرصيد"
+    "balance_overview": "نظرة عامة على الرصيد",
+    "expenses_categories": "فئات المصروفات",
+    "categories": "الفئات"
 }

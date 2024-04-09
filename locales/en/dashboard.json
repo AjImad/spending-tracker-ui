@@ -4,5 +4,7 @@
     "expense": "Expense",
     "income": "Income",
     "balance": "Balance",
-    "balance_overview": "Balance Overview"
+    "balance_overview": "Balance Overview",
+    "expenses_categories": "Expenses Categories",
+    "categories": "Categories"
 }
