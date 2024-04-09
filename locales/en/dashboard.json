@@ -1,1 +1,8 @@
-{"w_back":"Hi, Welcome back 👋"}
+{
+    "current_balance":"Current balance",
+    "w_back":"Hi, Welcome back 👋",
+    "expense": "Expense",
+    "income": "Income",
+    "balance": "Balance"
+    
+}

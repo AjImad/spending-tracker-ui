@@ -1,9 +1,12 @@
 import ReactApexChart from "react-apexcharts";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 
 const WalletOverview = () => {
   const isMobile = useMediaQuery("only screen and (max-width : 923px)");
+  const { t } = useTranslation("dashboard");
+
   const options = {
     chart: {
       type: "donut",
@@ -12,7 +15,7 @@ const WalletOverview = () => {
     dataLabels: {
       enabled: false,
     },
-    labels: ["Expense", "Income"],
+    labels: [t("expense"), t("income")],
 
     plotOptions: {
       pie: {
@@ -33,11 +36,11 @@ const WalletOverview = () => {
             },
             total: {
               show: true,
-              label: "Balance",
+              label: t("balance"),
               formatter: (w: any) => {
                 const total = w.globals.seriesTotals.reduce(
                   (a: any, b: any) => {
-                    return a + b;
+                    return b - a;
                   },
                   0
                 );
@@ -92,15 +95,15 @@ const WalletOverview = () => {
         >
           <div className="absolute inset-0 bg-black opacity-70 rounded-xl"></div>
           <div className="absolute inset-0 px-6 pt-6">
-            <p className="text-neutral-400 text-xl">Current balance</p>
+            <p className="text-neutral-400 text-xl">{t("current_balance")}</p>
             <p className="text-white text-3xl font-bold my-4">MAD 7,500</p>
             <div className="flex space-x-6 text-white text-lg">
               <div className="flex flex-col space-y-2">
-                <p className="text-md text-neutral-400">Income</p>
+                <p className="text-md text-neutral-400">{t("income")}</p>
                 <p className="font-bold text-2xl">MAD 10.000</p>
               </div>
               <div className="flex flex-col space-y-2">
-                <p className="text-md text-neutral-400">Expense</p>
+                <p className="text-md text-neutral-400">{t("expense")}</p>
                 <p className="font-bold text-2xl">MAD 2,500</p>
               </div>
             </div>

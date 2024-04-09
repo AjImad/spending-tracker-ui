@@ -1,1 +1,6 @@
-{"w_back":"Bonjour et bienvenue 👋"}
+{"current_balance":"Solde actuel",
+"w_back":"Bonjour et bienvenue 👋",
+"expense": "Dépense",
+"income": "Revenu",
+"balance": "Solde"
+}

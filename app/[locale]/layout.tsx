@@ -6,7 +6,7 @@ import TranslationsProvider from "@/components/providers/TranslationsProvider";
 
 const roboto = Roboto({
   weight: "400",
-  subsets: ["latin-ext"],
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
