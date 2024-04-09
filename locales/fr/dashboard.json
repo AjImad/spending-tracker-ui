@@ -2,5 +2,6 @@
 "w_back":"Bonjour et bienvenue 👋",
 "expense": "Dépense",
 "income": "Revenu",
-"balance": "Solde"
+"balance": "Solde",
+"balance_overview": "Aperçu du solde"
 }

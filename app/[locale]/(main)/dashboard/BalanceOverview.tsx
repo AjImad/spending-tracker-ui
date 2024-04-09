@@ -1,6 +1,8 @@
 import ReactApexChart from "react-apexcharts";
+import { useTranslation } from "react-i18next";
 
 const BalanceOverview = () => {
+  const { t } = useTranslation("dashboard");
   var options = {
     chart: {
       type: "area",
@@ -42,7 +44,7 @@ const BalanceOverview = () => {
   return (
     <div className="w-full inline-block bg-white rounded-xl shadow-md p-4">
       <div className="text-md font-bold text-slate-800 leading-normal">
-        Balance overview
+        {t("balance_overview")}
       </div>
       <ReactApexChart
         options={options as ApexCharts.ApexOptions}
