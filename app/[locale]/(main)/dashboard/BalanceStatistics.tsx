@@ -56,9 +56,9 @@ const BalanceStatistics = () => {
         t("months.jul"),
         t("months.aug"),
         t("months.sep"),
-        t("months.oct"),
-        t("months.nov"),
-        t("months.dec"),
+        // t("months.oct"),
+        // t("months.nov"),
+        // t("months.dec"),
       ],
     },
     fill: {
@@ -76,11 +76,11 @@ const BalanceStatistics = () => {
   const series = [
     {
       name: t("income"),
-      data: [69, 99, 89, 44, 55, 57, 56, 61, 58, 63, 60, 66],
+      data: [69, 99, 89, 44, 55, 57, 56, 61, 58],
     },
     {
       name: t("expense"),
-      data: [76, 85, 150, 76, 85, 101, 98, 87, 105, 91, 114, 94],
+      data: [76, 85, 150, 76, 85, 101, 98, 87, 105],
     },
   ];
 

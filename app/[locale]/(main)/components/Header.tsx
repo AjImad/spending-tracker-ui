@@ -1,4 +1,3 @@
-import { Languages } from "@/components/constants/Langues";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
@@ -33,12 +32,14 @@ import {
   CommandSeparator,
   CommandShortcut,
 } from "@/components/ui/command";
+import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 const Header = () => {
   const isMobile = useMediaQuery("(max-width: 927px)");
-
+  const { i18n } = useTranslation("dashboard");
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -63,7 +64,12 @@ const Header = () => {
           className="flex justify-between px-1 hover:bg-muted/70"
           onClick={() => setOpen(true)}
         >
-          <div className="flex justify-center items-center space-x-2 text-muted-foreground">
+          <div
+            className={cn(
+              "flex justify-center items-center space-x-2 text-muted-foreground",
+              i18n.language === "ar" && "space-x-reverse"
+            )}
+          >
             <Search className="text-muted-foreground w-4 h-4" />
             <kbd className="hidden pointer-events-none md:inline-flex h-6 select-none justify-center items-center gap-1 rounded-lg border bg-muted p-2 text-sm  font-mono font-bold text-muted-foreground opacity-100">
               <p className="font-extrabold">⌘</p>
@@ -110,7 +116,12 @@ const Header = () => {
           </CommandList>
         </CommandDialog>
       </div>
-      <div className="flex justify-center items-end space-x-4 md:space-x-7">
+      <div
+        className={cn(
+          "flex justify-center items-end space-x-4 md:space-x-6",
+          i18n.language === "ar" && "space-x-reverse md:space-x-reverse"
+        )}
+      >
         {/* Language Selector */}
         <LanguageSwitcher isMobile={isMobile} />
         {/* Notification Bell */}
