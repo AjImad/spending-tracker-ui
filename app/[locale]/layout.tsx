@@ -21,9 +21,11 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }>) {
-  const { t, resources } = await initTranslations(params.locale, ["dashboard"]);
+  const { t, resources, i18n } = await initTranslations(params.locale, [
+    "dashboard",
+  ]);
   return (
-    <html lang="en">
+    <html dir={i18n.language === "ar" ? "rtl" : "ltr"}>
       <body className={roboto.className}>
         <TranslationsProvider
           locale={params.locale}

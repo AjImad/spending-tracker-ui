@@ -82,7 +82,7 @@ const ExpensesCategories = () => {
         <h4 className="text-md font-bold text-slate-800 leading-normal mb-5">
           {t("expenses_categories")}
         </h4>
-        <div className="flex justify-center items-center">
+        <div dir="ltr" className="flex justify-center items-center">
           <ReactApexChart
             options={options as ApexCharts.ApexOptions}
             series={series}

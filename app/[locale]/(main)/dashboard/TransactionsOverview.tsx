@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import { format } from "date-fns";
 import { arMA, enUS, fr } from "date-fns/locale";
@@ -21,7 +22,12 @@ const TransactionsOverview = () => {
           {/* Transaction 1 */}
           {isMobile ? (
             <div className="flex justify-between items-center hover:bg-neutral-100/95 p-2 rounded-lg cursor-pointer">
-              <div className="flex space-x-2">
+              <div
+                className={cn(
+                  "flex space-x-2",
+                  i18n.language === "ar" && "space-x-reverse"
+                )}
+              >
                 <Image
                   src="/fuel.svg"
                   alt="Fuel"
@@ -34,7 +40,12 @@ const TransactionsOverview = () => {
                   <p className="text-sm text-neutral-600">Wallet</p>
                 </div>
               </div>
-              <div className="flex space-x-2 h-full">
+              <div
+                className={cn(
+                  "flex space-x-2 h-full",
+                  i18n.language === "ar" && "space-x-reverse"
+                )}
+              >
                 <div className="text-end text-sm">
                   <p className="text-[#212b36]">$29.9</p>
                   <p className="text-[#212b36]">
@@ -54,7 +65,10 @@ const TransactionsOverview = () => {
           ) : (
             <div className="flex justify-between items-center hover:bg-neutral-100/95 p-2 rounded-lg cursor-pointer">
               <div
-                className="flex space-x-2"
+                className={cn(
+                  "flex space-x-2",
+                  i18n.language === "ar" && "space-x-reverse"
+                )}
                 style={{
                   flexShrink: 0,
                   width: "200px",
@@ -78,7 +92,7 @@ const TransactionsOverview = () => {
               </div>
               <div>
                 <p className="text-sm bg-[#ff5630]/[.16] text-[#b71d18] rounded-md p-1">
-                  Expense
+                  {t("expense")}
                 </p>
               </div>
               <div>
@@ -99,7 +113,12 @@ const TransactionsOverview = () => {
           {/* Transaction 2 */}
           {isMobile ? (
             <div className="flex justify-between items-center hover:bg-neutral-100/95 p-2 rounded-lg cursor-pointer">
-              <div className="flex space-x-2">
+              <div
+                className={cn(
+                  "flex space-x-2",
+                  i18n.language === "ar" && "space-x-reverse"
+                )}
+              >
                 <Image
                   src="/workbag.svg"
                   alt="Salary"
@@ -112,7 +131,12 @@ const TransactionsOverview = () => {
                   <p className="text-sm text-neutral-600">Wallet</p>
                 </div>
               </div>
-              <div className="flex space-x-2 h-full">
+              <div
+                className={cn(
+                  "flex space-x-2 h-full",
+                  i18n.language === "ar" && "space-x-reverse"
+                )}
+              >
                 <div className="text-end text-sm">
                   <p className="text-[#212b36]">$29.9</p>
                   <p className="text-[#212b36]">
@@ -132,7 +156,10 @@ const TransactionsOverview = () => {
           ) : (
             <div className="flex justify-between items-center hover:bg-neutral-100/95 p-2 rounded-lg cursor-pointer">
               <div
-                className="flex space-x-2"
+                className={cn(
+                  "flex space-x-2",
+                  i18n.language === "ar" && "space-x-reverse"
+                )}
                 style={{
                   flexShrink: 0,
                   width: "200px",
@@ -156,7 +183,7 @@ const TransactionsOverview = () => {
               </div>
               <div>
                 <p className="text-sm bg-[#22c55e]/[.16] text-[#118d57] rounded-md p-1">
-                  Income
+                  {t("income")}
                 </p>
               </div>
               <div>
@@ -177,7 +204,12 @@ const TransactionsOverview = () => {
           {/* Transaction 3 */}
           {isMobile ? (
             <div className="flex justify-between items-center hover:bg-neutral-100/95 p-2 rounded-lg cursor-pointer">
-              <div className="flex space-x-2">
+              <div
+                className={cn(
+                  "flex space-x-2",
+                  i18n.language === "ar" && "space-x-reverse"
+                )}
+              >
                 <Image
                   src="/entertaiment.svg"
                   alt="Entertaiment"
@@ -190,7 +222,12 @@ const TransactionsOverview = () => {
                   <p className="text-sm text-neutral-600">Wallet</p>
                 </div>
               </div>
-              <div className="flex space-x-2 h-full">
+              <div
+                className={cn(
+                  "flex space-x-2 h-full",
+                  i18n.language === "ar" && "space-x-reverse"
+                )}
+              >
                 <div className="text-end text-sm">
                   <p className="text-[#212b36]">$29.9</p>
                   <p className="text-[#212b36]">
@@ -210,7 +247,10 @@ const TransactionsOverview = () => {
           ) : (
             <div className="flex justify-between items-center hover:bg-neutral-100/95 p-2 rounded-lg cursor-pointer">
               <div
-                className="flex space-x-2"
+                className={cn(
+                  "flex space-x-2",
+                  i18n.language === "ar" && "space-x-reverse"
+                )}
                 style={{
                   flexShrink: 0,
                   width: "200px",
@@ -234,7 +274,7 @@ const TransactionsOverview = () => {
               </div>
               <div>
                 <p className="text-sm bg-[#ff5630]/[.16] text-[#b71d18] rounded-md p-1">
-                  Expense
+                  {t("expense")}
                 </p>
               </div>
               <div>
@@ -254,7 +294,12 @@ const TransactionsOverview = () => {
           {/* Transaction 4 */}
           {isMobile ? (
             <div className="flex justify-between items-center hover:bg-neutral-100/95 p-2 rounded-lg cursor-pointer">
-              <div className="flex space-x-2">
+              <div
+                className={cn(
+                  "flex space-x-2",
+                  i18n.language === "ar" && "space-x-reverse"
+                )}
+              >
                 <Image
                   src="/eatout.svg"
                   alt="Eating out"
@@ -267,7 +312,12 @@ const TransactionsOverview = () => {
                   <p className="text-sm text-neutral-600">Wallet</p>
                 </div>
               </div>
-              <div className="flex space-x-2 h-full">
+              <div
+                className={cn(
+                  "flex space-x-2 h-full",
+                  i18n.language === "ar" && "space-x-reverse"
+                )}
+              >
                 <div className="text-end text-sm">
                   <p className="text-[#212b36]">$29.9</p>
                   <p className="text-[#212b36]">
@@ -287,7 +337,10 @@ const TransactionsOverview = () => {
           ) : (
             <div className="flex justify-between items-center hover:bg-neutral-100/95 p-2 rounded-lg cursor-pointer">
               <div
-                className="flex space-x-2"
+                className={cn(
+                  "flex space-x-2",
+                  i18n.language === "ar" && "space-x-reverse"
+                )}
                 style={{
                   flexShrink: 0,
                   width: "200px",
@@ -311,7 +364,7 @@ const TransactionsOverview = () => {
               </div>
               <div>
                 <p className="text-sm bg-[#ff5630]/[.16] text-[#b71d18] rounded-md p-1">
-                  Expense
+                  {t("expense")}
                 </p>
               </div>
               <div>
