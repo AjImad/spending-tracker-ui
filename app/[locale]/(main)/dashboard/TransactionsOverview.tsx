@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { useMediaQuery } from "@uidotdev/usehooks";
 import { format } from "date-fns";
 import { arMA, enUS, fr } from "date-fns/locale";
-import { ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
@@ -390,7 +390,11 @@ const TransactionsOverview = () => {
           size="sm"
         >
           {t("view_all")}
-          <ChevronRight className="w-4 h-4 ml-1" />
+          {i18n.language === "ar" ? (
+            <ChevronLeft className="w-4 h-4 mr-1" />
+          ) : (
+            <ChevronRight className="w-4 h-4 ml-1" />
+          )}
         </Button>
       </div>
     </div>
