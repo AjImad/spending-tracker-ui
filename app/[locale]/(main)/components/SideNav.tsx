@@ -5,6 +5,7 @@ import { NavItem } from "@/types";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTranslation } from "react-i18next";
 
 interface SideNavProps {
   items: NavItem[];
@@ -13,6 +14,7 @@ interface SideNavProps {
 }
 
 const SideNav = ({ items, setOpen, className }: SideNavProps) => {
+  const { t } = useTranslation("dashboard");
   const path = usePathname();
   const { isOpen } = useSidebar();
   const lastItem = items[items.length - 1];
@@ -27,14 +29,14 @@ const SideNav = ({ items, setOpen, className }: SideNavProps) => {
             className={cn(
               buttonVariants({ variant: "ghost" }),
               "group relative flex h-12 justify-start text-muted-foreground hover:text-muted-foreground",
-              path === item.href &&
+              path.includes(item.href) &&
                 "bg-[#00a76f]/[0.08] text-[#00a76f] hover:bg-[#00a76f29] hover:text-[#00a76f]"
             )}
           >
             <item.icon
               className={cn(
                 "h-5 w-5 text-muted-foreground",
-                path === item.href && "text-[#00a76f]"
+                path.includes(item.href) && "text-[#00a76f]"
               )}
             />
             <span
@@ -43,7 +45,7 @@ const SideNav = ({ items, setOpen, className }: SideNavProps) => {
                 !isOpen && className
               )}
             >
-              {item.title}
+              {t(item.title)}
             </span>
           </Link>
         ))}
@@ -56,14 +58,14 @@ const SideNav = ({ items, setOpen, className }: SideNavProps) => {
           className={cn(
             buttonVariants({ variant: "ghost" }),
             "group relative flex h-12 justify-start text-muted-foreground hover:text-muted-foreground",
-            path === lastItem.href &&
+            path.includes(lastItem.href) &&
               "bg-[#00a76f]/[0.08] text-[#00a76f] hover:bg-[#00a76f29] hover:text-[#00a76f]"
           )}
         >
           <lastItem.icon
             className={cn(
               "h-5 w-5 text-customBlue text-muted-foreground",
-              path === lastItem.href && "text-white"
+              path.includes(lastItem.href) && "text-white"
             )}
           />
           <span
@@ -72,7 +74,7 @@ const SideNav = ({ items, setOpen, className }: SideNavProps) => {
               !isOpen && className
             )}
           >
-            {lastItem.title}
+            {t(lastItem.title)}
           </span>
         </Link>
       </div>

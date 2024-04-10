@@ -11,13 +11,13 @@ import {
 
 export const NavItems: NavItem[] = [
   {
-    title: "Dashboard",
+    title: "dashboard",
     icon: LayoutDashboard,
     href: "/dashboard",
     color: "#252d49",
   },
   {
-    title: "Transactions",
+    title: "transactions",
     icon: ArrowRightLeft,
     href: "/transactions",
     color: "#252d49",
@@ -44,31 +44,31 @@ export const NavItems: NavItem[] = [
     // ],
   },
   {
-    title: "My Wallet",
+    title: "my_wallet",
     icon: Wallet,
     href: "/my-wallet",
     color: "#252d49",
   },
   {
-    title: "Budgets",
+    title: "budgets",
     icon: PiggyBank,
     href: "/budgets",
     color: "#252d49",
   },
+  // {
+  //   title: "Account",
+  //   icon: User,
+  //   href: "/account",
+  //   color: "#252d49",
+  // },
   {
-    title: "Account",
-    icon: User,
-    href: "/account",
-    color: "#252d49",
-  },
-  {
-    title: "Reports",
+    title: "reports",
     icon: LineChart,
     href: "/reports",
     color: "#252d49",
   },
   {
-    title: "Settings",
+    title: "settings",
     icon: Settings,
     href: "/settings",
     color: "#252d49",

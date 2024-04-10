@@ -24,5 +24,11 @@
         "oct": "Oct",
         "nov": "Nov",
         "dec": "Déc"
-    }
+    },
+    "dashboard": "Tableau de bord",
+    "transactions": "Transactions",
+    "budgets": "Budgets",
+    "settings": "Paramètres",
+    "my_wallet": "Mon portefeuille",
+    "reports": "Rapports"
 }

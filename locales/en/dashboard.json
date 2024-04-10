@@ -24,5 +24,11 @@
         "oct": "Oct",
         "nov": "Nov",
         "dec": "Dec"
-    }
+    },
+    "dashboard": "Dashboard",
+    "budgets": "Budgets",
+    "transactions": "Transactions",
+    "settings": "Settings",
+    "my_wallet": "My Wallet",
+    "reports": "Reports"
 }
