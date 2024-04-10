@@ -1,17 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { useMediaQuery } from "@uidotdev/usehooks";
+import { format } from "date-fns";
+import { arMA, enUS, fr } from "date-fns/locale";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const TransactionsOverview = () => {
-  const currentDate = new Date();
   const isMobile = useMediaQuery("(max-width: 927px)");
+  const { t, i18n } = useTranslation("dashboard");
 
   return (
     <div className="w-full relative inline-block shadow-md bg-white rounded-xl">
       <div className="p-4">
         <h4 className="text-md font-bold text-slate-800 leading-normal mb-5">
-          Transactions overview
+          {t("transactions_overview")}
         </h4>
         {/* List transactions */}
         <div className="space-y-2">
@@ -35,10 +38,13 @@ const TransactionsOverview = () => {
                 <div className="text-end text-sm">
                   <p className="text-[#212b36]">$29.9</p>
                   <p className="text-[#212b36]">
-                    {currentDate.toLocaleDateString("en-US", {
-                      day: "2-digit",
-                      month: "short",
-                      year: "numeric",
+                    {format(new Date(), "PP", {
+                      locale:
+                        i18n.language === "en"
+                          ? enUS
+                          : i18n.language === "fr"
+                          ? fr
+                          : arMA,
                     })}
                   </p>
                 </div>
@@ -77,10 +83,13 @@ const TransactionsOverview = () => {
               </div>
               <div>
                 <p className="text-[#212b36]">
-                  {currentDate.toLocaleDateString("en-US", {
-                    day: "2-digit",
-                    month: "short",
-                    year: "numeric",
+                  {format(new Date(), "PP", {
+                    locale:
+                      i18n.language === "en"
+                        ? enUS
+                        : i18n.language === "fr"
+                        ? fr
+                        : arMA,
                   })}
                 </p>
               </div>
@@ -107,10 +116,13 @@ const TransactionsOverview = () => {
                 <div className="text-end text-sm">
                   <p className="text-[#212b36]">$29.9</p>
                   <p className="text-[#212b36]">
-                    {currentDate.toLocaleDateString("en-US", {
-                      day: "2-digit",
-                      month: "short",
-                      year: "numeric",
+                    {format(new Date(), "PP", {
+                      locale:
+                        i18n.language === "en"
+                          ? enUS
+                          : i18n.language === "fr"
+                          ? fr
+                          : arMA,
                     })}
                   </p>
                 </div>
@@ -149,10 +161,13 @@ const TransactionsOverview = () => {
               </div>
               <div>
                 <p className="text-[#212b36]">
-                  {currentDate.toLocaleDateString("en-US", {
-                    day: "2-digit",
-                    month: "short",
-                    year: "numeric",
+                  {format(new Date(), "PP", {
+                    locale:
+                      i18n.language === "en"
+                        ? enUS
+                        : i18n.language === "fr"
+                        ? fr
+                        : arMA,
                   })}
                 </p>
               </div>
@@ -179,10 +194,13 @@ const TransactionsOverview = () => {
                 <div className="text-end text-sm">
                   <p className="text-[#212b36]">$29.9</p>
                   <p className="text-[#212b36]">
-                    {currentDate.toLocaleDateString("en-US", {
-                      day: "2-digit",
-                      month: "short",
-                      year: "numeric",
+                    {format(new Date(), "PP", {
+                      locale:
+                        i18n.language === "en"
+                          ? enUS
+                          : i18n.language === "fr"
+                          ? fr
+                          : arMA,
                     })}
                   </p>
                 </div>
@@ -221,10 +239,13 @@ const TransactionsOverview = () => {
               </div>
               <div>
                 <p className="text-[#212b36]">
-                  {currentDate.toLocaleDateString("en-US", {
-                    day: "2-digit",
-                    month: "short",
-                    year: "numeric",
+                  {format(new Date(), "PP", {
+                    locale:
+                      i18n.language === "en"
+                        ? enUS
+                        : i18n.language === "fr"
+                        ? fr
+                        : arMA,
                   })}
                 </p>
               </div>
@@ -250,10 +271,13 @@ const TransactionsOverview = () => {
                 <div className="text-end text-sm">
                   <p className="text-[#212b36]">$29.9</p>
                   <p className="text-[#212b36]">
-                    {currentDate.toLocaleDateString("en-US", {
-                      day: "2-digit",
-                      month: "short",
-                      year: "numeric",
+                    {format(new Date(), "PP", {
+                      locale:
+                        i18n.language === "en"
+                          ? enUS
+                          : i18n.language === "fr"
+                          ? fr
+                          : arMA,
                     })}
                   </p>
                 </div>
@@ -292,10 +316,13 @@ const TransactionsOverview = () => {
               </div>
               <div>
                 <p className="text-[#212b36]">
-                  {currentDate.toLocaleDateString("en-US", {
-                    day: "2-digit",
-                    month: "short",
-                    year: "numeric",
+                  {format(new Date(), "PP", {
+                    locale:
+                      i18n.language === "en"
+                        ? enUS
+                        : i18n.language === "fr"
+                        ? fr
+                        : arMA,
                   })}
                 </p>
               </div>
@@ -309,7 +336,7 @@ const TransactionsOverview = () => {
           className="text-neutral-600 text-sm"
           size="sm"
         >
-          View all
+          {t("view_all")}
           <ChevronRight className="w-4 h-4 ml-1" />
         </Button>
       </div>

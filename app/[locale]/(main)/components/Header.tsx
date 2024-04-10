@@ -66,7 +66,7 @@ const Header = () => {
           <div className="flex justify-center items-center space-x-2 text-muted-foreground">
             <Search className="text-muted-foreground w-4 h-4" />
             <kbd className="hidden pointer-events-none md:inline-flex h-6 select-none justify-center items-center gap-1 rounded-lg border bg-muted p-2 text-sm  font-mono font-bold text-muted-foreground opacity-100">
-              <span className="text-lg">⌘</span>
+              <p className="font-extrabold">⌘</p>
               <p>J</p>
             </kbd>
           </div>

@@ -1,9 +1,12 @@
-{"current_balance":"Solde actuel",
-"w_back":"Bonjour et bienvenue 👋",
-"expense": "Dépense",
-"income": "Revenu",
-"balance": "Solde",
-"balance_overview": "Aperçu du solde",
-"expenses_categories": "Catégories de dépenses",
-"categories": "Catégories"
+{
+    "current_balance":"Solde actuel",
+    "w_back":"Bonjour et bienvenue 👋",
+        "expense": "Dépense",
+    "income": "Revenu",
+    "balance": "Solde",
+    "balance_overview": "Aperçu du solde",
+    "expenses_categories": "Catégories de dépenses",
+    "categories": "Catégories",
+    "transactions_overview": "Aperçu des transactions",
+    "view_all": "Voir tout"
 }

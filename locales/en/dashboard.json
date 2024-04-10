@@ -6,5 +6,7 @@
     "balance": "Balance",
     "balance_overview": "Balance Overview",
     "expenses_categories": "Expenses Categories",
-    "categories": "Categories"
+    "categories": "Categories",
+    "transactions_overview": "Transactions Overview",
+    "view_all": "View All"
 }
