@@ -2,16 +2,18 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import ProgressBar from "../components/ProgressBar";
+import { useTranslation } from "react-i18next";
 
 const BudgetOverview = () => {
   const startDate: Date = new Date("2024-04-01");
   const endDate: Date = new Date("2024-04-30");
+  const { t } = useTranslation("dashboard");
 
   return (
     <div className="w-full inline-block bg-white rounded-xl shadow-md ">
       <div className="p-4">
         <div className="text-md font-bold text-slate-800 leading-normal mb-5">
-          Budget overview
+          {t("budget_overview")}
         </div>
         <div className="space-y-[.5] hover:bg-neutral-100/95 p-2 rounded-lg cursor-pointer">
           <p>Entertaiment</p>
@@ -72,7 +74,7 @@ const BudgetOverview = () => {
           className="text-neutral-600 text-sm"
           size="sm"
         >
-          View all
+          {t("view_all")}
           <ChevronRight className="w-4 h-4 ml-1" />
         </Button>
       </div>

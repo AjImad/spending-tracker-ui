@@ -4,10 +4,11 @@
     "expense": "المصروفات",
     "income": "الدخل",
     "balance": "الرصيد",
-    "balance_overview": "نظرة عامة على الرصيد",
+    "balance_overview": "الرصيد",
     "expenses_categories": "فئات المصروفات",
     "categories": "الفئات",
-    "transactions_overview": "نظرة عامة على المعاملات",
-    "view_all": "عرض الكل"
+    "transactions_overview": "المعاملات",
+    "view_all": "عرض الكل",
+    "budget_overview": "الميزانية"
 
 }

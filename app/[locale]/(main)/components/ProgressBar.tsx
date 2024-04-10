@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { format } from "date-fns";
+import { arMA, enUS, fr } from "date-fns/locale";
+import { useTranslation } from "react-i18next";
 
 interface ProgressBarProps {
   startDate: Date;
@@ -19,6 +22,7 @@ const ProgressBar = ({
   const elapsedDays = Math.ceil(
     (today.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)
   );
+  const { i18n } = useTranslation();
   const progressPercent = (elapsedDays / totalDays) * 100;
 
   // Calculate position of current date indicator
@@ -44,18 +48,24 @@ const ProgressBar = ({
       )}
       <div className="flex justify-between text-xs md:text-sm text-muted-foreground">
         <p>
-          {startDate.toLocaleDateString("en-US", {
-            day: "2-digit",
-            month: "short",
-            year: "numeric",
+          {format(startDate, "PP", {
+            locale:
+              i18n.language === "en"
+                ? enUS
+                : i18n.language === "fr"
+                ? fr
+                : arMA,
           })}
         </p>
         <p>27%</p>
         <p>
-          {endDate.toLocaleDateString("en-US", {
-            day: "2-digit",
-            month: "short",
-            year: "numeric",
+          {format(endDate, "PP", {
+            locale:
+              i18n.language === "en"
+                ? enUS
+                : i18n.language === "fr"
+                ? fr
+                : arMA,
           })}
         </p>
       </div>
