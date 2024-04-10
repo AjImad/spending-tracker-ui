@@ -9,5 +9,20 @@
     "categories": "Catégories",
     "transactions_overview": "Aperçu des transactions",
     "view_all": "Voir tout",
-    "budget_overview": "Aperçu du budget"
+    "budget_overview": "Aperçu du budget",
+    "balance_statistics": "Statistiques du solde",
+    "months": {
+        "jan": "Jan",
+        "feb": "Fév",
+        "mar": "Mar",
+        "apr": "Avr",
+        "may": "Mai",
+        "jun": "Juin",
+        "jul": "Juil",
+        "aug": "Août",
+        "sep": "Sept",
+        "oct": "Oct",
+        "nov": "Nov",
+        "dec": "Déc"
+    }
 }

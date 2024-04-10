@@ -1,7 +1,9 @@
 import ReactApexChart from "react-apexcharts";
 import { useMediaQuery } from "@uidotdev/usehooks";
+import { useTranslation } from "react-i18next";
 
 const BalanceStatistics = () => {
+  const { t } = useTranslation("dashboard");
   const isMobile = useMediaQuery("only screen and (max-width : 923px)");
   const options = {
     chart: {
@@ -45,15 +47,18 @@ const BalanceStatistics = () => {
     },
     xaxis: {
       categories: [
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
+        t("months.jan"),
+        t("months.feb"),
+        t("months.mar"),
+        t("months.apr"),
+        t("months.may"),
+        t("months.jun"),
+        t("months.jul"),
+        t("months.aug"),
+        t("months.sep"),
+        t("months.oct"),
+        t("months.nov"),
+        t("months.dec"),
       ],
     },
     fill: {
@@ -69,17 +74,20 @@ const BalanceStatistics = () => {
   };
 
   const series = [
-    { name: "Income", data: [44, 55, 57, 56, 61, 58, 63, 60, 66] },
     {
-      name: "Expense",
-      data: [76, 85, 101, 98, 87, 105, 91, 114, 94],
+      name: t("income"),
+      data: [69, 99, 89, 44, 55, 57, 56, 61, 58, 63, 60, 66],
+    },
+    {
+      name: t("expense"),
+      data: [76, 85, 150, 76, 85, 101, 98, 87, 105, 91, 114, 94],
     },
   ];
 
   return (
     <div className="relative w-full inline-block bg-white rounded-xl shadow-md p-4">
       <div className="text-md font-bold text-slate-800 leading-normal">
-        Balance statistics
+        {t("balance_statistics")}
       </div>
       <ReactApexChart
         options={options as ApexCharts.ApexOptions}

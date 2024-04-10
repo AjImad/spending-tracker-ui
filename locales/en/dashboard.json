@@ -9,5 +9,20 @@
     "categories": "Categories",
     "transactions_overview": "Transactions Overview",
     "view_all": "View All",
-    "budget_overview": "Budget Overview"
+    "budget_overview": "Budget Overview",
+    "balance_statistics": "Balance Statistics",
+    "months": {
+        "jan": "Jan",
+        "feb": "Feb",
+        "mar": "Mar",
+        "apr": "Apr",
+        "may": "May",
+        "jun": "Jun",
+        "jul": "Jul",
+        "aug": "Aug",
+        "sep": "Sep",
+        "oct": "Oct",
+        "nov": "Nov",
+        "dec": "Dec"
+    }
 }
