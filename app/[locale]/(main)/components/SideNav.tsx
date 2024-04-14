@@ -14,12 +14,12 @@ interface SideNavProps {
 }
 
 const SideNav = ({ items, setOpen, className }: SideNavProps) => {
-  const { t } = useTranslation("dashboard");
+  const { t, i18n } = useTranslation("dashboard");
   const path = usePathname();
   const { isOpen } = useSidebar();
   const lastItem = items[items.length - 1];
   return (
-    <nav className="flex flex-col justify-between h-full">
+    <nav className="flex flex-col justify-between h-full ">
       <div className="space-y-2">
         {items.slice(0, items.length - 1).map((item) => (
           <Link
@@ -42,7 +42,8 @@ const SideNav = ({ items, setOpen, className }: SideNavProps) => {
             <span
               className={cn(
                 "absolute left-12 text-base duration-200",
-                !isOpen && className
+                !isOpen && className,
+                i18n.language === "ar" && "right-12"
               )}
             >
               {t(item.title)}
@@ -71,7 +72,8 @@ const SideNav = ({ items, setOpen, className }: SideNavProps) => {
           <span
             className={cn(
               "absolute left-12 text-base duration-200",
-              !isOpen && className
+              !isOpen && className,
+              i18n.language === "ar" && "right-12"
             )}
           >
             {t(lastItem.title)}

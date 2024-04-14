@@ -1,10 +1,11 @@
 import { useSidebar } from "@/hooks/useSlidebar";
 import { cn } from "@/lib/utils";
-import { ChevronsRight } from "lucide-react";
+import { ChevronsLeft, ChevronsRight } from "lucide-react";
 import { useState } from "react";
 import SideNav from "./SideNav";
 import { NavItems } from "@/components/constants/NavItems";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 interface SidebarProps {
   className?: string;
@@ -13,6 +14,7 @@ interface SidebarProps {
 const Sidebar = ({ className }: SidebarProps) => {
   const { isOpen, toggle } = useSidebar();
   const [status, setStatus] = useState(false);
+  const { i18n } = useTranslation("dashboard");
 
   const handleToggle = () => {
     setStatus(!status);
@@ -42,13 +44,23 @@ const Sidebar = ({ className }: SidebarProps) => {
           {isOpen ? "Swiftecs." : "Swftx"}
         </h1>
       </Link>
-      <ChevronsRight
-        className={cn(
-          "absolute -right-3 top-19 cursor-pointer rounded-full border bg-background text-3xl text-foreground p-0.5",
-          isOpen && "rotate-180"
-        )}
-        onClick={handleToggle}
-      />
+      {i18n.language === "ar" ? (
+        <ChevronsLeft
+          className={cn(
+            "absolute -left-3 top-19 cursor-pointer rounded-full border bg-background text-3xl text-foreground p-0.5",
+            isOpen && "rotate-180"
+          )}
+          onClick={handleToggle}
+        />
+      ) : (
+        <ChevronsRight
+          className={cn(
+            "absolute -right-3 top-19 cursor-pointer rounded-full border bg-background text-3xl text-foreground p-0.5",
+            isOpen && "rotate-180"
+          )}
+          onClick={handleToggle}
+        />
+      )}
       <div className="space-y-4 py-4 h-full">
         <div className=" pt-6 h-full">
           <SideNav
