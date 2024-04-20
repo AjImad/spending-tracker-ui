@@ -25,8 +25,11 @@ export default async function RootLayout({
     "dashboard",
   ]);
   return (
-    <html dir={i18n.language === "ar" ? "rtl" : "ltr"}>
-      <body className={roboto.className}>
+    <html>
+      <body
+        dir={i18n.language === "ar" ? "rtl" : "ltr"}
+        className={roboto.className}
+      >
         <TranslationsProvider
           locale={params.locale}
           namespaces={["dashboard"]}

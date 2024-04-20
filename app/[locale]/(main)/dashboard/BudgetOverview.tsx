@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
-import ProgressBar from "../components/ProgressBar";
+import ProgressBar from "../components/progressbar/ProgressBar";
 import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
 

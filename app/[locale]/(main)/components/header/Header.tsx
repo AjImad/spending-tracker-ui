@@ -20,7 +20,7 @@ import {
   Smile,
   User,
 } from "lucide-react";
-import MobileSidebar from "./MobileSidebar";
+import MobileSidebar from "../sidebar/MobileSidebar";
 
 import {
   CommandDialog,
