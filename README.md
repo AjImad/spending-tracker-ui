@@ -1,9 +1,5 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Swiftecs for personal spending tracker: Dashboard Overview
-
-file:///home/ajbar-imad/Pictures/Screenshots/Screenshot%20from%202024-04-17%2019-31-46.png
-
 
 ## Getting Started
 
